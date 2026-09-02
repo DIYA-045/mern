@@ -16,6 +16,12 @@ import Profile from "./pages/Profile";
 import CollectorDashboard from "./pages/CollectorDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 
+import AdminLogin from "./pages/AdminLogin";
+import Courses from "./pages/Courses";
+import ParentLogin from "./pages/ParentLogin";
+import Quiz from "./pages/Quiz";
+import StudentLogin from "./pages/StudentLogin";
+
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -23,99 +29,42 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* =========================
-            PUBLIC PAGES
-        ========================== */}
+        {/* Public Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/verify-otp" element={<VerifyOTP />} />
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        {/* EcoTrack Citizen Pages */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/report-waste" element={<ReportWaste />} />
+        <Route path="/schedule-pickup" element={<SchedulePickup />} />
+        <Route path="/my-requests" element={<MyRequests />} />
+        <Route path="/profile" element={<Profile />} />
 
-        <Route
-          path="/about"
-          element={<About />}
-        />
-
-        <Route
-          path="/services"
-          element={<Services />}
-        />
-
-        <Route
-          path="/login"
-          element={<Login />}
-        />
-
-        <Route
-          path="/register"
-          element={<Register />}
-        />
-
-        {/* =========================
-            EMAIL OTP
-        ========================== */}
-
-        <Route
-          path="/verify-otp"
-          element={<VerifyOTP />}
-        />
-
-        {/* =========================
-            CITIZEN PAGES
-        ========================== */}
-
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
-
-        <Route
-          path="/report-waste"
-          element={<ReportWaste />}
-        />
-
-        <Route
-          path="/schedule-pickup"
-          element={<SchedulePickup />}
-        />
-
-        <Route
-          path="/my-requests"
-          element={<MyRequests />}
-        />
-
-        <Route
-          path="/profile"
-          element={<Profile />}
-        />
-
-        {/* =========================
-            COLLECTOR
-        ========================== */}
-
+        {/* EcoTrack Collector */}
         <Route
           path="/collector-dashboard"
           element={<CollectorDashboard />}
         />
 
-        {/* =========================
-            ADMIN
-        ========================== */}
-
+        {/* EcoTrack Admin */}
         <Route
           path="/admin-dashboard"
           element={<AdminDashboard />}
         />
 
-        {/* =========================
-            404
-        ========================== */}
+        {/* Group Learning Platform Pages */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/parent-login" element={<ParentLogin />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/student-login" element={<StudentLogin />} />
 
-        <Route
-          path="*"
-          element={<NotFound />}
-        />
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </BrowserRouter>
