@@ -1,29 +1,42 @@
+import Navbar from "../components/Navbar.jsx";
 function Home() {
   return (
-    <div className="home">
-      <h1>Welcome to Kids Learning Platform</h1>
+    <>
+      <Navbar />
 
-      <p>Learn, Play and Grow!</p>
+      <main className="hero">
+        <div className="hero-content">
+          <p className="tagline">♻️ SMART WASTE MANAGEMENT</p>
 
-      <button>Start Learning</button>
+          <h1>
+            A Cleaner City
+            <br />
+            Starts With <span>Us.</span>
+          </h1>
 
-      <h2>Our Popular Courses</h2>
+          <p className="hero-text">
+            Report waste, schedule pickups, track collections,
+            and help build a cleaner and greener community.
+          </p>
 
-      <div>
-        <h3>📚 English</h3>
-        <p>Learn English in a fun and easy way.</p>
-      </div>
+          <div className="hero-buttons">
+            <button className="primary-btn">
+              Report Waste
+            </button>
 
-      <div>
-        <h3>🔢 Mathematics</h3>
-        <p>Learn numbers and solve fun problems.</p>
-      </div>
+            <button className="secondary-btn">
+              Schedule Pickup
+            </button>
+          </div>
+        </div>
 
-      <div>
-        <h3>🔬 Science</h3>
-        <p>Explore the amazing world of science.</p>
-      </div>
-    </div>
+        <div className="hero-visual">
+          <div className="eco-circle">
+            ♻️
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
 

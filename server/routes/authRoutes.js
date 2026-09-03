@@ -1,15 +1,24 @@
-console.log("authRoutes loaded");
-
 const express = require("express");
+
+const {
+  registerUser,
+  verifyEmailOTP,
+  resendOTP,
+  loginUser,
+} = require("../controllers/authController");
 
 const router = express.Router();
 
-router.get("/register", (req, res) => {
-  res.send("Register API Working");
-});
+// Register
+router.post("/register", registerUser);
 
-router.get("/login", (req, res) => {
-  res.send("Login API Working");
-});
+// Login
+router.post("/login", loginUser);
+
+// Verify OTP
+router.post("/verify-otp", verifyEmailOTP);
+
+// Resend OTP
+router.post("/resend-otp", resendOTP);
 
 module.exports = router;

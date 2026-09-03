@@ -1,22 +1,31 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "15px 30px",
-        backgroundColor: "#4CAF50",
-        color: "white",
-      }}
-    >
-      <h2>Kids Learning</h2>
-      <div>
-        <a href="#" style={{ color: "white", marginRight: "20px" }}>Home</a>
-        <a href="#" style={{ color: "white", marginRight: "20px" }}>Courses</a>
-        <a href="#" style={{ color: "white", marginRight: "20px" }}>Login</a>
-        <a href="#" style={{ color: "white" }}>Register</a>
+    <nav className="navbar">
+
+      <div className="logo">
+        ♻️ EcoTrack
       </div>
+
+      <div className="nav-links">
+
+        <Link to="/">Home</Link>
+
+        <Link to="/about">About</Link>
+
+        <Link to="/services">Services</Link>
+
+        <Link to="/dashboard">Dashboard</Link>
+
+        <Link to="/login">Login</Link>
+
+        <Link to="/register" className="nav-button">
+          Get Started
+        </Link>
+
+      </div>
+
     </nav>
   );
 }
